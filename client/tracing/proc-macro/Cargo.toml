@@ -1,0 +1,21 @@
+[package]
+name = "sc-tracing-proc-macro"
+version = "4.0.0-dev"
+authors = ["Axia Technologies <admin@axia.io>"]
+edition = "2021"
+license = "Apache-2.0"
+homepage = "https://axlib.io"
+repository = "https://github.com/axiatech/axlib/"
+description = "Helper macros for Axlib's client CLI"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro-crate = "1.1.0"
+proc-macro2 = "1.0.29"
+quote = { version = "1.0.10", features = ["proc-macro"] }
+syn = { version = "1.0.81", features = ["proc-macro", "full", "extra-traits", "parsing"] }
